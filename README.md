@@ -14,13 +14,25 @@ go get github.com/sontags/logger
 Easy:
 
 ```
+package main
+
+import (
+	// ...
+
+	"github.com/codegangsta/negroni"
+	"github.com/sontags/logger"
+)
+
 // ...
+
 func main() {}
     // ...
+
 	n := negroni.New(
 		negroni.NewRecovery(),
 		logger.NewLogger(),
 	)
+
 	// ...
 }
 ```
